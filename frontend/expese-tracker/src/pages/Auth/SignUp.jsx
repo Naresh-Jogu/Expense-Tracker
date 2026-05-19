@@ -2,12 +2,13 @@ import React, { useState } from "react";
 
 import AuthLayout from "../../components/Layouts/AuthLayout";
 import Input from "../../components/Inputs/Input";
-import ProfilePhotoSelector from "../../components/Inputs/ProfilePhotoSelector";
+
 
 const SignUp = () => {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+ 
 
   const handleSignup = (e) => {
     e.preventDefault();
@@ -21,7 +22,7 @@ const SignUp = () => {
           Join us today by entering your details below.
         </p>
         <form onSubmit={handleSignup}>
-          <ProfilePhotoSelector image={profilePic} setImage={setProfilePic} />
+        
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <Input
